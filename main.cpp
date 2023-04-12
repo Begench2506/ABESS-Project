@@ -1,11 +1,10 @@
 #include <QCoreApplication>
-#include "mytcpserver.h"
+#include "singleton.h"
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
-
-    MyTcpServer server;
+    qDebug()<<Singleton::getInstance()->query("SELECT * FROM demo;");
 
     return a.exec();
 }
