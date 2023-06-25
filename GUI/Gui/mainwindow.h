@@ -1,0 +1,56 @@
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
+
+#include <QMainWindow>
+#include "auth_form.h"
+#include "stat.h"
+#include "task.h"
+
+QT_BEGIN_NAMESPACE
+namespace Ui { class MainWindow; }
+QT_END_NAMESPACE
+
+class MainWindow : public QMainWindow
+{
+    Q_OBJECT
+
+public:
+    MainWindow(QWidget *parent = nullptr);
+    ~MainWindow();
+
+private slots:
+    void on_exit_clicked();
+
+    void on_actionTask_1_triggered();
+
+    void on_actionTask_2_triggered();
+
+    void on_actionTask_3_triggered();
+
+    void on_actionTask_4_triggered();
+
+    void on_actionTask_5_triggered();
+
+    void on_actionExit_triggered();
+
+    void on_Task1_clicked();
+
+    void on_Task2_clicked();
+
+    void on_Task3_clicked();
+
+    void on_Task4_clicked();
+
+    void on_Task5_clicked();
+
+    void slot_on_auth_ok(QString log);
+
+    void on_Check_s_button_clicked();
+
+private:
+    Ui::MainWindow *ui;
+    Auth_form* ui_auth;
+    Stat * stat;
+    Task * task;
+};
+#endif // MAINWINDOW_H

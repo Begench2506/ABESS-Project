@@ -1,0 +1,41 @@
+QT       += core gui
+QT += network
+
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+CONFIG += c++17
+
+# You can make your code fail to compile if it uses deprecated APIs.
+# In order to do so, uncomment the following line.
+#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
+
+SOURCES += \
+    auth_form.cpp \
+    func_for_tasks.cpp \
+    main.cpp \
+    mainwindow.cpp \
+    client_sing.cpp \
+    stat.cpp \
+    task.cpp \
+    task1_gen_var.cpp
+
+HEADERS += \
+    auth_form.h \
+    func_for_tasks.h \
+    mainwindow.h \
+    client_sing.h \
+    stat.h \
+    task.h \
+    task1_gen_var.h
+
+FORMS += \
+    admin_stat.ui \
+    auth_form.ui \
+    mainwindow.ui \
+    stat.ui \
+    task.ui
+
+# Default rules for deployment.
+qnx: target.path = /tmp/$${TARGET}/bin
+else: unix:!android: target.path = /opt/$${TARGET}/bin
+!isEmpty(target.path): INSTALLS += target
